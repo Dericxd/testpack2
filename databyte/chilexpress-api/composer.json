@@ -1,0 +1,53 @@
+{
+    "name": "databyte/chilexpress-api",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Databyte S.A.",
+            "email": "soporte@databyte.cl",
+            "homepage": "https://www.databyte.cl/"
+        }
+    ],
+    "minimum-stability": "stable", 
+    "keywords": ["Laravel", "chilexpress", "api", "databyte"],
+    "require": {
+        
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "files": [
+            "src/Helpers/helpers.php"
+        ],
+        "psr-4": {
+            "Databyte\\ChilexpressApi\\": "src/",
+            "Databyte\\ChilexpressApi\\Console\\Commands\\": "src/Commands/",
+            "Databyte\\ChilexpressApi\\Database\\Seeds\\": "src/database/seeds/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Databyte\\ChilexpressApi\\": "src/",
+            "Databyte\\ChilexpressApi\\Console\\Commands\\": "src/Commands/",
+            "Databyte\\ChilexpressApi\\Database\\Seeds\\": "src/database/seeds/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Databyte\\ChilexpressApi\\Providers\\ChilexpressApiServiceProvider",
+                "Databyte\\ChilexpressApi\\Providers\\ChilexpressApiSettingServiceProvider",
+                "Databyte\\ChilexpressApi\\Providers\\ChilexpressCountyServiceProvider",
+                "Databyte\\ChilexpressApi\\Providers\\ChilexpressRegionServiceProvider",
+                "Databyte\\ChilexpressApi\\Providers\\EventServiceProvider",
+                "Databyte\\ChilexpressApi\\Providers\\FacadesServiceProvider",
+                "Databyte\\ChilexpressApi\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "ChilexpressApiSettings": "Databyte\\ChilexpressApi\\Facades\\ChilexpressApiSettings"
+            }
+        }
+    }
+}
